@@ -1,0 +1,50 @@
+package hw1;
+
+import java.util.Scanner;
+import java.util.ArrayList;
+
+public class invoice {
+
+//arrays
+public static void main(String[] args) {
+    ArrayList<String> items = new ArrayList<String>();
+    ArrayList<Double> prices = new ArrayList<Double>();
+    ArrayList<String> purchaseproducts = new ArrayList<String>();
+    ArrayList<Double> purchaseprices = new ArrayList<Double>();
+
+//information
+    items.add("Bison Sweater");
+    prices.add(55.99);
+    items.add("Bison Tee");
+    prices.add(14.99);
+    items.add("Bison Hoodie");
+    prices.add(23.99);
+    items.add("Bison Bumpersticker");
+    prices.add(4.99);
+
+    String answer = " ";
+    input = new Scanner(System.in);
+    String item;
+    double sum = 0.0;
+    int index = -1;
+    do {
+        System.out.println("What products did you purchase?:  ");
+        item = input.nextLine();
+        purchaseproducts.add(item);
+        for (int i = 0; i < items.size(); i++) {
+            if (item.equals(items.get(i))) {
+                index = i;
+            }
+        }
+        purchaseprices.add(prices.get(index));
+    } while (!item.equals("none"));
+    double cost = 0.0;
+    for (int i = 0; i < purchaseprices.size(); i++) (
+    double purchaseproducts = purchaseprices.get(i);
+    cost += purchaseproducts;
+    }
+    System.out.println("Total $" + cost);
+
+}
+
+}
